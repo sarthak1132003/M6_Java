@@ -1,0 +1,43 @@
+/* Write a program to  find the given number is Armstrong number or not*/
+
+class ArmstrongNum
+{
+public static void main(String[]args)
+{
+int a=153;
+int a1=a;
+int a2=a;
+int count=0;
+int result=0;
+
+while(a>0)
+{
+count++;
+a=a/10;
+}
+
+while(a1>0)
+{
+int rem=a1%10;
+int power=1;
+
+
+for(int i=1; i<count; i++)
+{
+power=power*rem;
+}
+result=result+power;
+a1=a1/10;
+}
+
+
+if(result==a2)
+{
+System.out.println("Its a Armstrong Number");
+}
+else
+{
+System.out.println("Its Not a Armstrong Number");
+}
+}
+}
